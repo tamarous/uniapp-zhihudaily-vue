@@ -1,0 +1,1 @@
+<view class="container"><uni-list vue-id="8dd740cc-1" bind:__l="__l" vue-slots="{{['default']}}"><block wx:for="{{newsList.stories}}" wx:for-item="item" wx:for-index="index"><uni-list-item vue-id="{{('8dd740cc-2-'+index)+','+('8dd740cc-1')}}" title="item.title" bind:__l="__l"></uni-list-item></block></uni-list></view>
