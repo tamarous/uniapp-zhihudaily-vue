@@ -1,7 +1,10 @@
 import Vue from 'vue'
 import App from './App'
+import {router} from './routers/router.js'
 
 Vue.config.productionTip = false
+
+Vue.use(router);
 
 App.mpType = 'app'
 

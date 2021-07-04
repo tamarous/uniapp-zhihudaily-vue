@@ -1,7 +1,7 @@
 <template>
 	<view class="container">
 		<swiper :indicator-dots="true" :autoplay="true">
-			<swiper-item v-for="top_story in topStories" :key="top_story.id">
+			<swiper-item v-for="top_story in top_stories" :key="top_story.id"> 
 				<view>
 					<text>{{top_story.title}}</text>
 					<image :src="top_story.image"></image>
@@ -9,7 +9,7 @@
 			</swiper-item>
 		</swiper>
 		<uni-list>
-			<uni-list-item v-for="(item,index) in stories" :title="item.title">
+			<uni-list-item v-for="item in stories" :title="item.title" :key="item.id" clickable @click="goDetail(item.id)">
 			</uni-list-item>
 		</uni-list>
 	</view>
@@ -21,15 +21,27 @@
 		data() {
 			return {
 				stories: null,
-				topStories: null,
+				top_stories: null,
 			}
 		},
 		methods: {
 			getList() {
+				console.log('this getList');
 				api.getNews().then( data => {
 					this.stories = data.data.stories;
-					this.topStories = data.data.top_stories;
+					this.top_stories = data.data.top_stories;
 				});
+			},
+			goDetail(story_id) {
+				console.log('this story_id is ' + story_id);
+				this.$router.push(
+					{
+						name: 'detail',
+						params: {
+							id: story_id
+						}
+					}
+				);
 			}
 		},
 		mounted() {

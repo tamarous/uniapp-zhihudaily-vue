@@ -1,0 +1,1 @@
+<view><rich-text nodes="{{detail_data.body}}"></rich-text></view>
