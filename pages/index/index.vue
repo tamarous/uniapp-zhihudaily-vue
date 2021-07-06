@@ -30,11 +30,12 @@
 				api.getNews().then( data => {
 					this.stories = data.data.stories;
 					this.top_stories = data.data.top_stories;
+					console.log('this stories: ' + JSON.stringify(this.stories));
 				});
 			},
 			goDetail(story_id) {
 				console.log('this story_id is ' + story_id);
-				this.$router.push(
+				this.$Router.push(
 					{
 						name: 'detail',
 						params: {

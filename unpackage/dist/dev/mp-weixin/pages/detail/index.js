@@ -150,11 +150,9 @@ var _default = { data: function data() {return { detail_data: null };
       });
     } },
 
-  onLoad: function onLoad() {var _this2 = this;
-    this.$AppReady.then(function () {
-      console.log(_this2.$route);
-      _this2.fetchDetail(_this2.$route.params.id);
-    });
+  onLoad: function onLoad() {
+    console.log('this route: ' + JSON.stringify(this.$Route));
+    this.fetchDetail(this.$Route.query.id);
   } };exports.default = _default;
 
 /***/ })

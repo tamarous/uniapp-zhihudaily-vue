@@ -62,6 +62,7 @@ yarn-error.log*
 node_modules/
 uni_modules
 jspm_packages/
+unpackage/
 
 # Optional npm cache directory
 .npm

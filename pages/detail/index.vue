@@ -21,10 +21,8 @@ export default {
 		}
 	},
 	onLoad() {
-		this.$AppReady.then(()=>{
-			console.log(this.$route);
-			this.fetchDetail(this.$route.params.id);
-		})
+		console.log('this route: ' + JSON.stringify(this.$Route));
+		this.fetchDetail(this.$Route.query.id);
 	}
 }
 </script>

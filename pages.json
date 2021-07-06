@@ -9,6 +9,7 @@
 		},
 		{
             "path" : "pages/detail/index",
+			"aliasPath": "/detail/:id",
             "style" :                                                                                    
             {
                 "navigationBarTitleText": "",

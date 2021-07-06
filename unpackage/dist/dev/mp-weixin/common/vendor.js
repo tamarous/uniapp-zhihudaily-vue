@@ -2063,7 +2063,7 @@ var _uniSimpleRouter = __webpack_require__(/*! uni-simple-router */ 12);function
 
 var router = (0, _uniSimpleRouter.createRouter)({
   platform: "mp-weixin",
-  routes: _toConsumableArray([{"path":"/pages/index/index","name":"home","aliasPath":"/"},{"path":"/pages/detail/index","name":"detail"}]) });
+  routes: _toConsumableArray([{"path":"/pages/index/index","name":"home","aliasPath":"/"},{"path":"/pages/detail/index","name":"detail","aliasPath":"/detail/:id"}]) });
 
 //全局路由前置守卫
 exports.router = router;router.beforeEach(function (to, from, next) {

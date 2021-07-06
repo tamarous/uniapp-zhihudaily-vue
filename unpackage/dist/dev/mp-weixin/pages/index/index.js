@@ -198,8 +198,9 @@ var _index = _interopRequireDefault(__webpack_require__(/*! ../../api/index.js *
 //
 //
 //
-var _default = { data: function data() {return { stories: null, top_stories: null };}, methods: { getList: function getList() {var _this = this;console.log('this getList');_index.default.getNews().then(function (data) {_this.stories = data.data.stories;_this.top_stories = data.data.top_stories;});}, goDetail: function goDetail(story_id) {console.log('this story_id is ' + story_id);
-      this.$router.push(
+var _default = { data: function data() {return { stories: null, top_stories: null };}, methods: { getList: function getList() {var _this = this;console.log('this getList');_index.default.getNews().then(function (data) {_this.stories = data.data.stories;_this.top_stories = data.data.top_stories;console.log('this stories: ' + JSON.stringify(_this.stories));});}, goDetail: function goDetail(story_id) {
+      console.log('this story_id is ' + story_id);
+      this.$Router.push(
       {
         name: 'detail',
         params: {
